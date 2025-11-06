@@ -170,7 +170,7 @@ function clearLines() {
         lines += linesCleared;
         score += linesCleared * 100 * level;
         level = Math.floor(lines / 10) + 1;
-        dropInterval = Math.max(50, 1000 - (level - 1) * 50);
+        dropInterval = Math.max(50, 1000 * Math.pow(0.8, level - 1));
     }
 }
 
